@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Header/>
-    <PostList />
+    <div class="main">
+      <PostList />
+    </div>
+
   </div>
 </template>
 
