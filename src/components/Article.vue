@@ -48,6 +48,6 @@ export default {
 </script>
 
 <style>
-@import "../assets/markdown-github.css";
+@import url("../assets/markdown-github.css");
 
 </style>
