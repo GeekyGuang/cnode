@@ -25,7 +25,15 @@
             {{post | tabFormatter}}
           </span>
         </span>
-          <span>{{post.title}}</span>
+          <router-link :to="{
+            name: 'post_content',
+            params: {
+              id: post.id,
+              name: post.author.loginname
+            }
+          }">
+            <span>{{post.title}}</span>
+          </router-link>
           <span class="last_reply">{{post.last_reply_at | formatDate}}</span>
         </li>
       </ul>
@@ -35,9 +43,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import axios from 'axios'
-Vue.prototype.$http = axios
 export default {
     data(){
       return {
