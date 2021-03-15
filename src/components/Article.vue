@@ -14,6 +14,35 @@
       </ul>
       <div v-html="post.content" class="topic_content"></div>
     </div>
+    <div id="reply">
+      <div class="topbar">回复</div>
+      <div v-for="(reply, index) in post.replies" class="replySec">
+        <div class="replyup">
+          <router-link :to="{
+            name: 'user_info',
+            params:{
+              name: reply.author.loginname
+            }
+          }">
+            <img :src="reply.author.avatar_url" alt="">
+          </router-link>
+          <router-link :to="{
+            name: 'user_info',
+            params:{
+              name: reply.author.loginname
+            }
+          }">
+            <span>{{reply.author.loginname}}</span>
+          </router-link>
+          <span>
+            {{index+1}}楼
+          </span>
+          <span v-if="reply.ups.length>0">{{reply.ups.length}}</span>
+          <span v-else></span>
+        </div>
+        <p v-html="reply.content"></p>
+      </div>
+    </div>
 
   </div>
 </div>
