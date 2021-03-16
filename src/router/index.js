@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PostList from '@/components/PostList'
 import Article from '@/components/Article'
+import UserInfo from '@/components/UserInfo'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,13 @@ const routes = [
     path: '/topic/:id&author=:name',
     components: {
       main: Article
+    }
+  },
+  {
+    name: 'user_info',
+    path: '/userinfo/:name',
+    components: {
+      main: UserInfo
     }
   }
 
