@@ -47,7 +47,7 @@ export default {
     data(){
       return {
         isLoading: false,
-        posts:[]
+        posts:{}
       }
     },
     methods: {
