@@ -58,5 +58,34 @@ name: "Pagination.vue",
 </script>
 
 <style scoped>
+ .pagination {
+   margin-top: 5px;
+   margin-bottom: 20px;
+   background-color: white;
+   padding: 6px 20px;
+   border-radius: 5px;
+   border: 1px solid #888888;
+ }
+ button {
+   background-color: #fff;
+   border: 1px solid #ddd;
+   color: #778087;
+   border-right: 3px;
+   outline: none;
+   cursor: pointer;
+   padding: 0 2px;
+   width: 55px;
+   height: 29px;
+ }
 
+ .pagebtn {
+   position: relative;
+   bottom: 1px;
+   width: 40px;
+   margin: 0 4px;
+ }
+ .currentPage {
+   color: white;
+   background-color: #1f1b1b;
+ }
 </style>
